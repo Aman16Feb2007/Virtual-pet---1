@@ -20,7 +20,7 @@ function draw(){
   background(rgb(46, 139, 87));
 
   if(keyWentDown(UP_ARROW)){
-    writeStock(food);
+    stock(foodS);
     dog.addImage(dogImg1);
   }
 
