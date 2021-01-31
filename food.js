@@ -2,17 +2,16 @@ class Food{
     constructor(){
     }
 
-    getFoodStock(){
-    foodStock = database.ref('food').on("value", (data)=>{
-        foodS = data.val();
-    });
-    }
-
-    updateFoodStock(stock){
-        database.ref('/').update({
-            'foodS' : stock
+    getCount(){
+        database.ref('foodSS').on("value",function(data){
+            foodStock = data.val();
         })
     }
 
+    updateCount(cc){
+        database.ref('/').update({
+            foodSS:cc
+        })
+    }
 
 }
